@@ -1,0 +1,21 @@
+{
+  "name": "eira-widget",
+  "version": "0.0.1",
+  "description": "a page render",
+  "dependencies": {
+    "elaina": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twimicn/eira.git"
+  },
+  "keywords": [
+    "Elaina"
+  ],
+  "author": "IvanLu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Twimicn/eira/issues"
+  },
+  "homepage": "https://eira.twimi.cn"
+}
