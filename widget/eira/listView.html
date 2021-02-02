@@ -28,7 +28,7 @@
             } else {
                 this.$container.append(piece);
             }
-            $.Eira.piece(piece, item);
+            Elaina.piece(piece, item);
             var pieceHandler = {
                 remove: function () {
                     that.remove(piece.index());
@@ -54,7 +54,7 @@
 
         ListView.prototype.clear = function () {
             this.dataList = [];
-            $.Eira.dispose(this.$container);
+            Elaina.dispose(this.$container);
             this.$container.empty().html(this.emptyContent);
         };
 
@@ -63,7 +63,7 @@
                 dataList = []
             }
             this.dataList = dataList;
-            $.Eira.dispose(this.$container);
+            Elaina.dispose(this.$container);
             this.$container.empty();
             if (dataList.length === 0) {
                 this.$container.html(this.emptyContent);
@@ -77,7 +77,7 @@
             if (this.dataList[index] !== undefined) {
                 this.dataList.splice(index, 1);
                 var piece = this.$container.children(":eq(" + index + ")");
-                $.Eira.dispose(piece);
+                Elaina.dispose(piece);
                 piece.remove();
                 piece = null;
             }
