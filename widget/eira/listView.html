@@ -38,17 +38,21 @@
                     that.update(piece.index(), newItem);
                 }
             };
-            piece.on('click', '[item-click]', function () {
-                var evtName = $(this).attr('item-click');
-                if (typeof that.events[evtName] === 'function') {
-                    that.events[evtName](item, piece.index(), pieceHandler);
-                }
+            piece.on('click', '[item-click]', function (e) {
+                that.$emit($(this).attr('item-click'), {
+                    e: e,
+                    data: item,
+                    index: piece.index(),
+                    handler: pieceHandler,
+                });
             });
-            piece.on('dblclick', '[item-dblclick]', function () {
-                var evtName = $(this).attr('item-dblclick');
-                if (typeof that.events[evtName] === 'function') {
-                    that.events[evtName](item, piece.index(), pieceHandler);
-                }
+            piece.on('dblclick', '[item-dblclick]', function (e) {
+                that.$emit($(this).attr('item-dblclick'), {
+                    e: e,
+                    data: item,
+                    index: piece.index(),
+                    handler: pieceHandler,
+                });
             });
         };
 
